@@ -6,7 +6,18 @@ function proiz()
 
     num2 = document.getElementById('n2').value;
     num2 = parseInt(num2);
-
+  
+    var reg = /[A-Za-zА-Яа-яЁё]/g;
+    
+    if(reg.test(num1)||reg.test(num2) && num1<0||num2<0)
+    {
+        alert('Вводить можно только положительные числа!'); 
+    }
+    if((num1==0||num2==0)||(num1==NULL||num2==NULL))   
+    {
+        alert('Введите значения!');
+    }
+   
 
     rezult = num1*num2;
     //innerHTML

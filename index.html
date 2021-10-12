@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 5</title>
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script> 
+    <script>
+        function onClick() {
+          alert("click");
+        }
+        
+        window.addEventListener('DOMContentLoaded', function (event) {
+          console.log("DOM fully loaded and parsed");
+          let b = document.getElementById("my-button");
+          b.addEventListener("click", onClick);
+        });
+        </script>  
 </head>
 <body>
-    <p>Цена товара: <input type="text" id="n1"></p>
-    <p>Количество товара: <input type="text" id="n2"></p>
+    <p>Цена товара: <input type="text" placeholder ="Введи цену" oninput="changeHalder1(this)" id="n1"></p>
+    <p>Количество товара: <input type="text" placeholder ="Введи количество" oninput="changeHalder2(this)" id="n2"></p>
     <button onclick="proiz()">Результат</button>
     <hr>
-    <p>Итого:  </p> <h1 id="out"></h1>
+    <p id="out"></p>
 </body>
 </html>
