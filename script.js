@@ -11,7 +11,7 @@ function proiz()
     
     if(reg.test(num1)||reg.test(num2) && num1<0||num2<0)
     {
-        alert('Вводить можно только положительные числа!'); 
+        alert('Вводить можно только числа!'); 
     }
     if(num1==0||num2==0)   
     {
